@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#mouseActionUnselect" prefHeight="400.0" prefWidth="600.0" styleClass="borderpane" stylesheets="@stylesheetMain.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.actividades.gestortareas.MainController">
+   <center>
+      <TableView fx:id="tablaTareas" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="columnaTarea" prefWidth="75.0" styleClass="tableColumn" text="TAREA" />
+            <TableColumn fx:id="columnaFinalizada" prefWidth="75.0" styleClass="tableColumn" text="FINALIZADA" />
+          <TableColumn fx:id="columnaFecha" prefWidth="75.0" styleClass="tableColumn" text="FECHA" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <BorderPane.margin>
+            <Insets left="20.0" right="20.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pagination fx:id="pagination" maxPageIndicatorCount="5" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="200.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Pagination>
+            <ButtonBar buttonMinWidth="100.0" buttonOrder="U" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="360.0">
+              <buttons>
+                <Button fx:id="buttonDeleteTask" disable="true" mnemonicParsing="false" onAction="#actionDeleteTask" prefHeight="30.0" styleClass="buttonGeneral" text="Borrar Tarea" />
+                <Button fx:id="buttonGotoTaskView" mnemonicParsing="false" onAction="#actionGotoTaskView" prefHeight="30.0" styleClass="buttonGeneral" text="Crear Tarea" />
+                <Button fx:id="buttonClose" mnemonicParsing="false" onAction="#actionClose" prefHeight="30.0" styleClass="buttonGeneral" text="Cerrar" />
+              </buttons>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ButtonBar>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <top>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label id="title" alignment="CENTER" contentDisplay="CENTER" mouseTransparent="true" text="Listado de tareas" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

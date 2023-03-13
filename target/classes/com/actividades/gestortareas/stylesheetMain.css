@@ -1,0 +1,72 @@
+
+.stage {
+
+}
+
+.borderpane {
+
+    -fx-background-color: black;
+    -fx-border-color: gold;
+    -fx-border-width: 5;
+}
+
+#title {
+	
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.buttonGeneral {
+
+    -fx-background-radius: 1.5em;
+    -fx-background-color: black;
+    -fx-border-radius: 1.5em;
+    -fx-border-color: gold;
+    -fx-border-width: 1px;
+    -fx-border-insets: -1px;
+    -fx-text-fill: gold;
+}
+.buttonGeneral:hover {
+
+    -fx-background-color: green;
+}
+
+.table-view {
+
+    -fx-border-color: gold;
+    -fx-border-width: 2;
+    -fx-border-insets: -1px;
+    -fx-background-color: lightgray;
+}
+
+.table-view .column-header {
+
+    -fx-border-color: gold;
+    -fx-border-width: 1px;
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header .label{
+
+    -fx-text-fill: white;
+    -fx-alignment: CENTER;
+}
+
+.table-cell {
+
+    -fx-border-color: gold;
+    -fx-border-width: 0.5px;
+}
+.table-view:row-selection .table-row-cell:filled:hover {
+
+    -fx-background-color: green;
+}
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}
+.table-row-cell:empty {
+
+    -fx-background-color: whitesmoke;
+}
